@@ -89,6 +89,38 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
 
+    section {
+      margin-bottom: 40px;
+    }
+
+    h1, h2, p {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 20px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #f1c40f;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    blockquote {
+      font-style: italic;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-left: 5px solid #f1c40f;
+      border-radius: 10px;
+      color: #f9e79f;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
     form {
       display: flex;
       flex-direction: column;
@@ -130,12 +162,6 @@
       background-color: rgba(0,0,0,0.7);
       margin-top: auto;
     }
-
-    h1, h2, p {
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto 20px;
-    }
   </style>
 </head>
 <body>
@@ -147,89 +173,133 @@
 
   <div id="dhoni" class="tabcontent active-tab">
     <h1>MS Dhoni - The Heart of Chennai Super Kings</h1>
+
     <div class="dhoni-images">
       <img src="https://cdn.dnaindia.com/sites/default/files/2023/03/16/2579391-untitled-design-2023-03-16t193156.989.jpg" alt="Dhoni in Practice">
       <img src="https://c.ndtvimg.com/2025-03/8biph38g_ms-dhoni_625x300_18_March_25.jpg" alt="Dhoni 2025">
       <img src="https://www.livemint.com/lm-img/img/2023/04/12/600x338/CRICKET-IND-IPL-T20-LUCKNOW-CHENNAI-32_16812994209_1681299446316_1681299446638_1681299446638.jpg" alt="Dhoni Recent Match">
     </div>
-    <p>
-      Mahendra Singh Dhoni, lovingly known as "Thala", has been the face of CSK since the inception of the IPL. Under his leadership, CSK has lifted the IPL trophy five times — in 2010, 2011, 2018, 2021, and 2023.
-    </p>
-    <p>
-      Known for his cool head, tactical genius, and incredible finishing ability, Dhoni continues to inspire fans and teammates alike. His presence on and off the field is unmatched, making him one of the most respected and successful captains in cricket history.
-    </p>
-    <p>
-      Even in the 2024 season, he shows no signs of slowing down — guiding the team with the same passion and commitment that has defined his glorious career. Beyond IPL, Dhoni led India to historic triumphs in the 2007 T20 World Cup, 2011 ODI World Cup, and 2013 Champions Trophy.
-    </p>
+
+    <section>
+      <p>
+        Mahendra Singh Dhoni, lovingly known as "Thala", has been the face of CSK since the inception of the IPL. Under his leadership, CSK has lifted the IPL trophy five times — in 2010, 2011, 2018, 2021, and 2023.
+      </p>
+      <p>
+        Known for his cool head, tactical genius, and incredible finishing ability, Dhoni continues to inspire fans and teammates alike. His presence on and off the field is unmatched, making him one of the most respected and successful captains in cricket history.
+      </p>
+      <p>
+        Even in the 2024 season, he shows no signs of slowing down — guiding the team with the same passion and commitment that has defined his glorious career.
+      </p>
+    </section>
+
+    <section>
+      <h2>🏆 Career Highlights</h2>
+      <ul style="list-style: none; padding-left: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+        <li>🥇 2007 T20 World Cup Winner</li>
+        <li>🏆 2010, 2011, 2018, 2021, 2023 IPL Champion</li>
+        <li>🏆 2011 ODI World Cup Winner</li>
+        <li>🏆 2013 Champions Trophy Winner</li>
+        <li>🎯 10,000+ ODI runs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💬 Iconic Dhoni Quote</h2>
+      <blockquote>
+        "I don't mind repeating everything. I love the process. I love to train and work hard." – M.S. Dhoni
+      </blockquote>
+    </section>
+
+    <section>
+      <h2>📌 Dhoni Facts</h2>
+      <ul style="max-width: 800px; margin: 0 auto;">
+        <li>🧠 Nickname "Captain Cool" suits his calm-under-pressure leadership style.</li>
+        <li>📱 Dhoni is rarely active on social media, letting his game speak louder than words.</li>
+        <li>🏍️ Owns a huge collection of bikes — over 40!</li>
+        <li>🪖 Holds honorary rank of Lieutenant Colonel in Indian Territorial Army.</li>
+        <li>🏡 Loves farming and spends his off-seasons in Ranchi with his dogs and nature.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📅 CSK Journey Timeline</h2>
+      <div style="display: flex; flex-direction: column; gap: 10px; max-width: 600px; margin: 0 auto; border-left: 3px solid #f1c40f; padding-left: 20px;">
+        <div><strong>2008:</strong> Joined CSK as captain in IPL's debut season</div>
+        <div><strong>2010 & 2011:</strong> Won back-to-back IPL titles</div>
+        <div><strong>2018:</strong> Made a grand comeback after CSK's return</div>
+        <div><strong>2023:</strong> Lifted 5th IPL title, tying with MI</div>
+        <div><strong>2024:</strong> Still going strong and mentoring young talent</div>
+      </div>
+    </section>
   </div>
 
-<div id="register" class="tabcontent">
-  <h2>Register to Join the CSK Dream</h2>
-  <form id="cskForm" enctype="multipart/form-data">
-    <div class="form-group">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" required>
-    </div>
+  <div id="register" class="tabcontent">
+    <h2>Register to Join the CSK Dream</h2>
+    <form id="cskForm" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
 
-    <div class="form-group">
-      <label for="age">Age:</label>
-      <input type="number" id="age" name="age" required>
-    </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
 
-    <div class="form-group">
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
 
-    <div class="form-group">
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
-    </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+      </div>
 
-    <div class="form-group">
-      <label for="role">Playing Role:</label>
-      <select id="role" name="role" required>
-        <option value="">--Select--</option>
-        <option value="batsman">Batsman</option>
-        <option value="bowler">Bowler</option>
-        <option value="allrounder">All-Rounder</option>
-        <option value="wicketkeeper">Wicket Keeper</option>
-      </select>
-    </div>
+      <div class="form-group">
+        <label for="role">Playing Role:</label>
+        <select id="role" name="role" required>
+          <option value="">--Select--</option>
+          <option value="batsman">Batsman</option>
+          <option value="bowler">Bowler</option>
+          <option value="allrounder">All-Rounder</option>
+          <option value="wicketkeeper">Wicket Keeper</option>
+        </select>
+      </div>
 
-    <div class="form-group">
-      <label for="experience">Cricket Experience:</label>
-      <select id="experience" name="experience" required>
-        <option value="">--Select--</option>
-        <option value="beginner">Beginner (0–2 years)</option>
-        <option value="intermediate">Intermediate (2–5 years)</option>
-        <option value="advanced">Advanced (5+ years)</option>
-      </select>
-    </div>
+      <div class="form-group">
+        <label for="experience">Cricket Experience:</label>
+        <select id="experience" name="experience" required>
+          <option value="">--Select--</option>
+          <option value="beginner">Beginner (0–2 years)</option>
+          <option value="intermediate">Intermediate (2–5 years)</option>
+          <option value="advanced">Advanced (5+ years)</option>
+        </select>
+      </div>
 
-    <div class="form-group">
-      <label for="hand">Preferred Hand:</label>
-      <select id="hand" name="hand" required>
-        <option value="">--Select--</option>
-        <option value="right">Right-Handed</option>
-        <option value="left">Left-Handed</option>
-        <option value="ambidextrous">Ambidextrous</option>
-      </select>
-    </div>
+      <div class="form-group">
+        <label for="hand">Preferred Hand:</label>
+        <select id="hand" name="hand" required>
+          <option value="">--Select--</option>
+          <option value="right">Right-Handed</option>
+          <option value="left">Left-Handed</option>
+          <option value="ambidextrous">Ambidextrous</option>
+        </select>
+      </div>
 
-    <div class="form-group">
-      <label for="bio">Brief Bio / Achievements:</label>
-      <textarea id="bio" name="bio" rows="4" placeholder="Tell us about your cricket journey..." style="width: 100%; padding: 10px; border-radius: 8px;"></textarea>
-    </div>
+      <div class="form-group">
+        <label for="bio">Brief Bio / Achievements:</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us about your cricket journey..." style="width: 100%; padding: 10px; border-radius: 8px;"></textarea>
+      </div>
 
-    <div class="form-group">
-      <label for="photo">Upload Your Photo:</label>
-      <input type="file" id="photo" name="photo" accept="image/*">
-    </div>
+      <div class="form-group">
+        <label for="photo">Upload Your Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+      </div>
 
-    <button type="submit" class="submit-btn">Submit Registration</button>
-  </form>
-</div>
+      <button type="submit" class="submit-btn">Submit Registration</button>
+    </form>
+  </div>
 
   <footer>
     © 2025 Chennai Super Kings Fan Page | Made with ❤️ for Dhoni & CSK
