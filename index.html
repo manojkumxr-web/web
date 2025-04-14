@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhoni in CSK</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Chennai_Super_Kings_Logo.svg/800px-Chennai_Super_Kings_Logo.svg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .tab {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+    }
+    .tab button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      padding: 14px 20px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .tab button:hover {
+      background-color: #f1c40f;
+      color: black;
+    }
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .active-tab {
+      display: block;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label, input, select {
+      display: block;
+      width: 100%;
+    }
+    input, select {
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+    }
+    .submit-btn {
+      background-color: #f1c40f;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .dhoni-images {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .dhoni-images img {
+      width: 300px;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tab">
+    <button onclick="openTab('dhoni')">Dhoni in CSK</button>
+    <button onclick="openTab('register')">Register for CSK Team</button>
+  </div>
+
+  <div id="dhoni" class="tabcontent active-tab">
+    <h1>MS Dhoni - Captain of CSK</h1>
+    <div class="dhoni-images">
+      <img src="https://images.news18.com/ibnlive/uploads/2024/03/dhoni-csk-2024-ipl-practice-1-2024-03-0b5c7b5957e5d45b8264017f8b774ae2.jpg" alt="Dhoni in Practice">
+      <img src="https://img.jagranjosh.com/images/2024/March/1932024/dhoni-ipl-2024.webp" alt="Dhoni 2024">
+      <img src="https://www.hindustantimes.com/ht-img/img/2024/03/22/1600x900/Dhoni_1711108843342_1711108853027.jpg" alt="Dhoni Recent Match">
+    </div>
+    <p>
+      Mahendra Singh Dhoni, affectionately called "Thala" by Chennai Super Kings fans, is one of the greatest captains in the history of the Indian Premier League. Under his leadership, CSK has won five IPL titles (2010, 2011, 2018, 2021, 2023), making the team one of the most successful franchises in IPL history.
+    </p>
+    <p>
+      Known for his calm demeanor, sharp cricketing acumen, and finishing skills, Dhoni has been instrumental in shaping the identity of CSK. Even in the 2024 season, Dhoni continues to inspire fans with his leadership and agility behind the stumps.
+    </p>
+    <p>
+      Beyond the IPL, Dhoni's illustrious career includes winning the ICC T20 World Cup in 2007, ICC Cricket World Cup in 2011, and the ICC Champions Trophy in 2013 as captain of the Indian national team.
+    </p>
+  </div>
+
+  <div id="register" class="tabcontent">
+    <h2>CSK Team Registration</h2>
+    <form id="cskForm">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+      <div class="form-group">
+        <label for="role">Playing Role:</label>
+        <select id="role" name="role" required>
+          <option value="batsman">Batsman</option>
+          <option value="bowler">Bowler</option>
+          <option value="allrounder">All-Rounder</option>
+          <option value="wicketkeeper">Wicket Keeper</option>
+        </select>
+      </div>
+      <button type="submit" class="submit-btn">Register</button>
+    </form>
+  </div>
+
+  <script>
+    function openTab(tabName) {
+      const contents = document.querySelectorAll('.tabcontent');
+      contents.forEach(content => content.classList.remove('active-tab'));
+      document.getElementById(tabName).classList.add('active-tab');
+    }
+
+    document.getElementById('cskForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for registering with CSK!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
