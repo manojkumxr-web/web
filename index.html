@@ -1,110 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dhoni in CSK</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
       height: 100%;
       margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Chennai_Super_Kings_Logo.svg/800px-Chennai_Super_Kings_Logo.svg.png');
-      background-repeat: no-repeat;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      background-image: url('https://wallpapercave.com/wp/wp8816801.jpg');
       background-size: cover;
       background-position: center;
-      color: white;
+      background-repeat: no-repeat;
+    }
+
+    body {
       display: flex;
       flex-direction: column;
+      backdrop-filter: brightness(0.9);
     }
+
     .tab {
       display: flex;
       justify-content: center;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
+
     .tab button {
       background-color: transparent;
-      border: none;
+      border: 2px solid #f1c40f;
       color: white;
-      padding: 14px 20px;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
       cursor: pointer;
-      font-size: 18px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
     }
-    .tab button:hover {
+
+    .tab button:hover,
+    .tab button.active-btn {
       background-color: #f1c40f;
       color: black;
     }
+
     .tabcontent {
       flex-grow: 1;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.8);
-      overflow-y: auto;
-    }
-    .tabcontent:not(.active-tab) {
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.7);
       display: none;
+      animation: fadeEffect 0.5s ease-in-out;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-radius: 15px;
+      margin-top: 20px;
     }
-    .form-group {
-      margin-bottom: 15px;
-    }
-    label, input, select {
+
+    .tabcontent.active-tab {
       display: block;
-      width: 100%;
     }
-    input, select {
-      padding: 10px;
-      margin-top: 5px;
-      border: none;
-      border-radius: 5px;
+
+    @keyframes fadeEffect {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
-    .submit-btn {
-      background-color: #f1c40f;
-      color: black;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+
     .dhoni-images {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
+      margin-bottom: 30px;
     }
+
     .dhoni-images img {
       width: 300px;
       border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    input, select {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    .submit-btn {
+      background-color: #f1c40f;
+      color: black;
+      font-weight: bold;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #d4ac0d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.7);
+      margin-top: auto;
+    }
+
+    h1, h2, p {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 20px;
     }
   </style>
 </head>
 <body>
+
   <div class="tab">
-    <button onclick="openTab('dhoni')">Dhoni in CSK</button>
-    <button onclick="openTab('register')">Register for CSK Team</button>
+    <button class="active-btn" onclick="openTab('dhoni', this)">Dhoni in CSK</button>
+    <button onclick="openTab('register', this)">Register for CSK Team</button>
   </div>
 
   <div id="dhoni" class="tabcontent active-tab">
-    <h1>MS Dhoni - Captain of CSK</h1>
+    <h1>MS Dhoni - The Heart of Chennai Super Kings</h1>
     <div class="dhoni-images">
       <img src="https://images.news18.com/ibnlive/uploads/2024/03/dhoni-csk-2024-ipl-practice-1-2024-03-0b5c7b5957e5d45b8264017f8b774ae2.jpg" alt="Dhoni in Practice">
       <img src="https://img.jagranjosh.com/images/2024/March/1932024/dhoni-ipl-2024.webp" alt="Dhoni 2024">
       <img src="https://www.hindustantimes.com/ht-img/img/2024/03/22/1600x900/Dhoni_1711108843342_1711108853027.jpg" alt="Dhoni Recent Match">
     </div>
     <p>
-      Mahendra Singh Dhoni, affectionately called "Thala" by Chennai Super Kings fans, is one of the greatest captains in the history of the Indian Premier League. Under his leadership, CSK has won five IPL titles (2010, 2011, 2018, 2021, 2023), making the team one of the most successful franchises in IPL history.
+      Mahendra Singh Dhoni, lovingly known as "Thala", has been the face of CSK since the inception of the IPL. Under his leadership, CSK has lifted the IPL trophy five times — in 2010, 2011, 2018, 2021, and 2023.
     </p>
     <p>
-      Known for his calm demeanor, sharp cricketing acumen, and finishing skills, Dhoni has been instrumental in shaping the identity of CSK. Even in the 2024 season, Dhoni continues to inspire fans with his leadership and agility behind the stumps.
+      Known for his cool head, tactical genius, and incredible finishing ability, Dhoni continues to inspire fans and teammates alike. His presence on and off the field is unmatched, making him one of the most respected and successful captains in cricket history.
     </p>
     <p>
-      Beyond the IPL, Dhoni's illustrious career includes winning the ICC T20 World Cup in 2007, ICC Cricket World Cup in 2011, and the ICC Champions Trophy in 2013 as captain of the Indian national team.
+      Even in the 2024 season, he shows no signs of slowing down — guiding the team with the same passion and commitment that has defined his glorious career. Beyond IPL, Dhoni led India to historic triumphs in the 2007 T20 World Cup, 2011 ODI World Cup, and 2013 Champions Trophy.
     </p>
   </div>
 
   <div id="register" class="tabcontent">
-    <h2>CSK Team Registration</h2>
+    <h2>Register to Join the CSK Dream</h2>
     <form id="cskForm">
       <div class="form-group">
         <label for="name">Full Name:</label>
@@ -127,16 +187,23 @@
     </form>
   </div>
 
+  <footer>
+    © 2025 Chennai Super Kings Fan Page | Made with ❤️ for Dhoni & CSK
+  </footer>
+
   <script>
-    function openTab(tabName) {
+    function openTab(tabName, btn) {
       const contents = document.querySelectorAll('.tabcontent');
-      contents.forEach(content => content.classList.remove('active-tab'));
+      const buttons = document.querySelectorAll('.tab button');
+      contents.forEach(c => c.classList.remove('active-tab'));
+      buttons.forEach(b => b.classList.remove('active-btn'));
       document.getElementById(tabName).classList.add('active-tab');
+      btn.classList.add('active-btn');
     }
 
     document.getElementById('cskForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Thank you for registering with CSK!');
+      alert('Thank you for registering with CSK! We’ll contact you soon.');
       this.reset();
     });
   </script>
