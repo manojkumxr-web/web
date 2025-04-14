@@ -163,29 +163,73 @@
     </p>
   </div>
 
-  <div id="register" class="tabcontent">
-    <h2>Register to Join the CSK Dream</h2>
-    <form id="cskForm">
-      <div class="form-group">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required>
-      </div>
-      <div class="form-group">
-        <label for="role">Playing Role:</label>
-        <select id="role" name="role" required>
-          <option value="batsman">Batsman</option>
-          <option value="bowler">Bowler</option>
-          <option value="allrounder">All-Rounder</option>
-          <option value="wicketkeeper">Wicket Keeper</option>
-        </select>
-      </div>
-      <button type="submit" class="submit-btn">Register</button>
-    </form>
-  </div>
+<div id="register" class="tabcontent">
+  <h2>Register to Join the CSK Dream</h2>
+  <form id="cskForm" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="role">Playing Role:</label>
+      <select id="role" name="role" required>
+        <option value="">--Select--</option>
+        <option value="batsman">Batsman</option>
+        <option value="bowler">Bowler</option>
+        <option value="allrounder">All-Rounder</option>
+        <option value="wicketkeeper">Wicket Keeper</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="experience">Cricket Experience:</label>
+      <select id="experience" name="experience" required>
+        <option value="">--Select--</option>
+        <option value="beginner">Beginner (0–2 years)</option>
+        <option value="intermediate">Intermediate (2–5 years)</option>
+        <option value="advanced">Advanced (5+ years)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="hand">Preferred Hand:</label>
+      <select id="hand" name="hand" required>
+        <option value="">--Select--</option>
+        <option value="right">Right-Handed</option>
+        <option value="left">Left-Handed</option>
+        <option value="ambidextrous">Ambidextrous</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="bio">Brief Bio / Achievements:</label>
+      <textarea id="bio" name="bio" rows="4" placeholder="Tell us about your cricket journey..." style="width: 100%; padding: 10px; border-radius: 8px;"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="photo">Upload Your Photo:</label>
+      <input type="file" id="photo" name="photo" accept="image/*">
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Registration</button>
+  </form>
+</div>
 
   <footer>
     © 2025 Chennai Super Kings Fan Page | Made with ❤️ for Dhoni & CSK
